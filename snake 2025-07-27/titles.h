@@ -45,8 +45,6 @@ public:
 	void add_piece_of_boody();
 	point get_coord_head();
 	void getspeed(int &speed);
-	
-	//void first_step(char& go);
 };
 
 bool check (point head, wall wal);
@@ -61,10 +59,5 @@ public:
 	bool check(point head);
 	
 };
-/*
-Функция _kbhit проверяет консоль на предмет недавнего
-нажатия клавиши. Если функция возвращает ненулевое значение,
-нажатие клавиши ожидает в буфере. Программа может затем вызвать 
-_getch или _getche для получения нажатия клавиши.
-*/
+
 int speed(int value);
