@@ -7,7 +7,7 @@
 #include "titles.h"
 #include <fstream>
 
-// усложнение по мере счета+ зависимость очков от уровня + файл с настройками
+
 void record( int &score) {
 	
 	// ;
@@ -30,14 +30,9 @@ int main() {
 	using namespace this_thread;
 	using namespace chrono;
 	
-	 // реализовать чтение и запись рекорда... The last piece of work.
+	
 	int score = 10, lvl = 0;
 	system("color 25");
-	//int16_t* size_x{new int16_t};
-	//int16_t* size_y{ new int16_t };
-	//std::cout << "write size of area (x,y) and after press ENTER: \n";
-	//std::cin >> *size_x >> *size_y;
-	//wall a(*size_x, *size_y);
 	wall a(40, 40);
 	std::cout << "Write level of difficult: 1 - 10 \n Write 55 for random level \n Write 0 for growing level \n and press ENTER\n";
 	std::cin >>lvl;
@@ -48,8 +43,6 @@ int main() {
 	lvl = speed(lvl);
 	system("cls");
 	system("color 75");
-	
-	//delete size_x, size_y;
 	HANDLE op = GetStdHandle(STD_OUTPUT_HANDLE);
 	COORD cPos;
 	cPos.X = 0; cPos.Y = a.getYbord() + 2;
@@ -84,7 +77,7 @@ int main() {
 				
 					mon_lvl++;
 					int lvl_copy = speed(mon_lvl);
-					zmey.getspeed(lvl_copy); // перераб. Слишком высоко!!!
+					zmey.getspeed(lvl_copy); 
 				
 				
 			}
