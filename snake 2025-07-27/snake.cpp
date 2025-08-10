@@ -7,8 +7,6 @@
 #pragma once
 
 void snake::add_piece_of_boody(){
-	// прописать случаи с головой. чтобюыдобавлялось согласно положению
-
 	if (this->posit == 'A') {
 		this->coord.push_back(point(this->coord.back().get_x(), this->coord.back().get_y() + 1));
 	}
@@ -21,7 +19,6 @@ void snake::add_piece_of_boody(){
 	if (this->posit == '<') {
 		this->coord.push_back(point(this->coord.back().get_x() + 1, this->coord.back().get_y()));
 	}
-	 // прописать случаи
 	HANDLE op;
 	COORD cPos;
 	op = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -33,8 +30,7 @@ void snake::add_piece_of_boody(){
 }
 
 
-void snake::move() {  // обязательна в мэйне!!!
-	//while (1) {
+void snake::move() {  
 	
 		
 		if (_kbhit() != 0) {
@@ -110,16 +106,16 @@ void snake::move() {  // обязательна в мэйне!!!
 }
 
 void snake::move_press_key(char &go) {
-	if ((go == 'D' || go == 'd' || go == 'в' || go == 'В') && this->posit != '<') {
+	if ((go == 'D' || go == 'd' || go == 'Гў' || go == 'Г‚') && this->posit != '<') {
 		this->posit = '>';
 	}
-	if ((go == 'ы' || go == 'Ы' || go == 's' || go == 'S') && this->posit != 'A') {
+	if ((go == 'Г»' || go == 'Г›' || go == 's' || go == 'S') && this->posit != 'A') {
 		this->posit = 'v';
 	}
-	if ((go == 'A' || go == 'a' || go == 'ф' || go == 'Ф') && this->posit != '>') {
+	if ((go == 'A' || go == 'a' || go == 'Гґ' || go == 'Г”') && this->posit != '>') {
 		this->posit = '<';
 	}
-	if ((go == 'Ц' || go == 'ц' || go == 'W' || go == 'w') && this->posit != 'v') {
+	if ((go == 'Г–' || go == 'Г¶' || go == 'W' || go == 'w') && this->posit != 'v') {
 		this->posit = 'A';
 	}
 
